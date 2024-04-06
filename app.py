@@ -24,8 +24,7 @@ def summarize_transcript(transcript_text):
 
 # Main function to run Streamlit app
 def main():
-    st.title("YouTube Video Summarizer")
-    st.write("Enter the YouTube video link below:")
+    st.title("YouTube Video Summarizer by Kaaraalan AI ")
 
     video_link = st.text_input("YouTube Video Link", "")
 
