@@ -17,7 +17,7 @@ def extract_transcript(video_id):
 def summarize_transcript(transcript_text):
     try:
         summarizer = pipeline("summarization")
-        summary = summarizer(transcript_text, max_length=1024, min_length=50, length_penalty=2.0, num_beams=4, temperature=0.5)
+        summary = summarizer(transcript_text, max_length=10000, min_length=50, length_penalty=2.0, num_beams=4, temperature=0.5)
         return summary[0]["summary_text"]
     except Exception as e:
         st.error(f"❌ Error summarizing transcript: {e}")
